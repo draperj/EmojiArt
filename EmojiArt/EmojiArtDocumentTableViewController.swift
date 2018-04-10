@@ -21,7 +21,7 @@ class EmojiArtDocumentTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return emojiArtDocuments.count
     }
-    
+        
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DocumentCell", for: indexPath)
@@ -35,6 +35,14 @@ class EmojiArtDocumentTableViewController: UITableViewController {
         emojiArtDocuments += ["Untitled".madeUnique(withRespectTo: emojiArtDocuments)]
         
         tableView.reloadData()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        if splitViewController?.preferredDisplayMode != .primaryOverlay {
+            splitViewController?.preferredDisplayMode = .primaryOverlay
+        }
     }
     
     /*
