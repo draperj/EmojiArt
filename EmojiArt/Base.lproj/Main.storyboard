@@ -95,6 +95,55 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="wNb-lT-hAK" secondAttribute="trailing" id="qPh-Sy-xd4"/>
                                         </constraints>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddEmojiButtonCell" id="lKc-ex-vM0">
+                                        <rect key="frame" x="180" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTL-bH-pVh">
+                                                    <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                                    <state key="normal" title="+"/>
+                                                    <connections>
+                                                        <action selector="addEmoji" destination="BYZ-38-t0r" eventType="touchUpInside" id="vde-8A-ltk"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="YTL-bH-pVh" secondAttribute="trailing" id="6kl-lv-QJ2"/>
+                                            <constraint firstItem="YTL-bH-pVh" firstAttribute="top" secondItem="lKc-ex-vM0" secondAttribute="topMargin" id="Bfo-iP-aNb"/>
+                                            <constraint firstItem="YTL-bH-pVh" firstAttribute="leading" secondItem="lKc-ex-vM0" secondAttribute="leadingMargin" id="IO0-1G-I7W"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="YTL-bH-pVh" secondAttribute="bottom" id="KSs-zT-nOA"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiInputCell" id="tdD-I7-fmx" customClass="TextFieldCollectionViewCell" customModule="EmojiArt" customModuleProvider="target">
+                                        <rect key="frame" x="270" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dy9-qJ-N1k">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="dy9-qJ-N1k" firstAttribute="leading" secondItem="tdD-I7-fmx" secondAttribute="leading" id="PiD-A0-Csk"/>
+                                            <constraint firstItem="dy9-qJ-N1k" firstAttribute="top" secondItem="tdD-I7-fmx" secondAttribute="top" id="SCn-on-aIB"/>
+                                            <constraint firstAttribute="bottom" secondItem="dy9-qJ-N1k" secondAttribute="bottom" id="lpD-lh-zGL"/>
+                                            <constraint firstAttribute="trailing" secondItem="dy9-qJ-N1k" secondAttribute="trailing" id="pNB-GG-2rd"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="textField" destination="dy9-qJ-N1k" id="PlT-Ta-2Ts"/>
+                                        </connections>
+                                    </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
